@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Resume-JD Match Checker</title>
+<link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <span class="logo-dot"></span>
+      <h1>Resume Match Checker</h1>
+    </header>
+
+    <!-- STATE: no resume uploaded -->
+    <section id="state-no-resume" class="state hidden">
+      <p class="hint">Upload your resume once - it'll be reused for every job you check.</p>
+      <input type="file" id="resume-file-input" accept="application/pdf" />
+      <button id="upload-btn" class="btn-primary">Upload Resume</button>
+      <p id="upload-status" class="status-text"></p>
+    </section>
+
+    <!-- STATE: ready to analyze -->
+    <section id="state-ready" class="state hidden">
+      <div class="resume-chip">
+        <span id="resume-filename">resume.pdf</span>
+        <button id="change-resume-btn" class="link-btn">Change</button>
+      </div>
+
+      <label class="jd-label" id="jd-label">Job description</label>
+      <textarea id="jd-textarea" rows="7" placeholder="Paste the job description here if it wasn't detected automatically..."></textarea>
+
+      <p id="detection-note" class="hint"></p>
+
+      <button id="analyze-btn" class="btn-primary">Analyze Match</button>
+    </section>
+
+    <!-- STATE: loading -->
+    <section id="state-loading" class="state hidden">
+      <div class="spinner"></div>
+      <p class="hint">Analyzing your resume against this job...</p>
+    </section>
+
+    <!-- STATE: results -->
+    <section id="state-results" class="state hidden">
+      <div class="score-circle-wrap">
+        <div id="score-circle" class="score-circle">
+          <span id="score-value">0%</span>
+        </div>
+        <span class="score-label">Match Score</span>
+      </div>
+
+      <p id="previous-scan-note" class="hint hidden"></p>
+
+      <div class="keyword-block">
+        <h3>Matched Keywords</h3>
+        <div id="matched-keywords" class="chip-list chip-list-good"></div>
+      </div>
+
+      <div class="keyword-block">
+        <h3>Missing Keywords</h3>
+        <div id="missing-keywords" class="chip-list chip-list-bad"></div>
+      </div>
+
+      <div class="keyword-block" id="ats-warnings-block">
+        <h3>ATS Formatting Warnings</h3>
+        <ul id="ats-warnings-list"></ul>
+      </div>
+
+      <div class="keyword-block" id="ai-suggestions-block">
+        <h3>AI Suggestions</h3>
+        <ul id="ai-suggestions-list"></ul>
+        <p id="ai-error-note" class="status-text error hidden"></p>
+      </div>
+
+      <button id="analyze-again-btn" class="btn-secondary">Analyze Another JD</button>
+    </section>
+
+    <!-- STATE: error -->
+    <section id="state-error" class="state hidden">
+      <p id="error-message" class="status-text error"></p>
+      <button id="retry-btn" class="btn-primary">Try Again</button>
+    </section>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
