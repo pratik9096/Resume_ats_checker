@@ -1,0 +1,95 @@
+java
+spring boot
+spring security
+spring data jpa
+hibernate
+rest api
+restful
+microservices
+mysql
+postgresql
+mongodb
+javascript
+typescript
+react
+angular
+vue
+node.js
+express
+html
+css
+tailwind
+bootstrap
+git
+github
+docker
+kubernetes
+jenkins
+ci/cd
+aws
+azure
+gcp
+linux
+maven
+gradle
+junit
+mockito
+agile
+scrum
+jira
+kafka
+redis
+rabbitmq
+graphql
+websocket
+oauth
+jwt
+api gateway
+load balancing
+system design
+data structures
+algorithms
+oop
+design patterns
+sql
+nosql
+unit testing
+integration testing
+tdd
+c++
+c#
+python
+django
+flask
+fastapi
+machine learning
+deep learning
+tensorflow
+pytorch
+data analysis
+pandas
+numpy
+power bi
+tableau
+excel
+figma
+ui/ux
+android
+kotlin
+swift
+ios
+flutter
+react native
+devops
+terraform
+ansible
+nginx
+apache
+elasticsearch
+grafana
+prometheus
+communication skills
+problem solving
+teamwork
+leadership
+project management
